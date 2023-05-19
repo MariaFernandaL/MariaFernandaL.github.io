@@ -1,0 +1,167 @@
+@import "card";
+
+$colorPrincipal: linear-gradient(90deg, rgba(64,62,105,1) 0%, rgba(228,220,220,1) 100%);
+$colorElements: rgba(255, 255, 255, 0.1);
+$radiusBorder: 35px;
+$sizeText: 20px;
+
+body{
+    background: $colorPrincipal;
+} 
+
+#navbarNav{
+    justify-content: flex-end;
+}
+
+#about{
+    background-color: $colorElements;
+    border-radius: $radiusBorder;
+}
+
+#intro{
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 7s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+#name{
+    font-size: $sizeText;
+}
+
+#correo{
+    font-size: $sizeText;
+}
+
+#message{
+    font-size: $sizeText;
+}
+
+#section1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 900px;
+    height: 200px;
+    align-items: center;
+}
+
+#sectionImg{
+    width: 0px;
+    height: auto;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+#sectionImg:hover{
+    cursor: crosshair;
+    width: 100px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+@media (min-width: 768px) {
+    #section1 {
+        max-width: 768px;
+    }
+}
+
+
+#brands{
+    align-items: center;
+}
+
+#title1{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#ulNav{
+    margin-left: 10px;
+}
+
+
+#testimonials {
+    padding: 80px 0;
+    background-color: $colorElements;
+    border-radius: $radiusBorder;
+}
+  
+.testimonial-item {
+    text-align: center;
+}
+
+.testimonial-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+  
+.testimonial-item h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.testimonial-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    #lineasPass {
+        margin-bottom: -2rem;
+    }
+}
+
+
+#imagen1{
+    animation: mover 4s infinite;
+}
+
+@keyframes mover {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .counter {
+    background-color: $colorElements;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .counter-value {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .counter-name {
+    font-size: 1.5em;
+    color: #777;
+  }
+  

@@ -1,0 +1,22 @@
+$colorElements: rgba(255, 255, 255, 0.1);
+$radiusBorder: 35px;
+
+@mixin cardStyle() {
+    background-color: $colorElements;
+    border-radius: $radiusBorder;
+}
+
+
+#card1{
+    @include cardStyle();
+}
+
+#card2{
+    max-height: 100%;
+    @include cardStyle();
+}
+
+#card3{
+    max-height: 100%;
+    @include cardStyle();
+}
